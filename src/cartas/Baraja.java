@@ -11,13 +11,22 @@ public class Baraja {
 		
 		cartas = new Carta[52];
 		
-		for(int i=0;i<13;i++) {
-			cartas[i] = creadorCarta(i+1, 'C');
+		int posicion = 0;
+		for(int i=0;i<52;i++) {
+			if(i<13) {
+				cartas[posicion++] = creadorCarta(i+1, 'C');
+			}
+			else if(i<26) {
+				cartas[posicion++] = creadorCarta(i-12, 'P');
+			}
+			else if(i<39) {
+				cartas[posicion++] = creadorCarta(i-25, 'T');
+			}
+			else if(i<52) {
+				cartas[posicion++] = creadorCarta(i-38, 'D');
+			}
 		}
 	}
-
-
-	
 	
 	private Carta creadorCarta(int numero,char palo) {
 		
