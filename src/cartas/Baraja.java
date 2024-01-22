@@ -10,6 +10,10 @@ public class Baraja {
 	public Baraja() {
 		
 		cartas = new Carta[52];
+		
+		for(int i=0;i<13;i++) {
+			cartas[i] = creadorCarta(i+1, 'C');
+		}
 	}
 
 
